@@ -6,7 +6,7 @@
 
 public class DiningPhilosophers {
 
-    //V1
+    //V1 - Dará deadlock rapidamente, pois todos tentarão pegar o garfo da esquerda.
     public static void main(String[] args) throws Exception {
 
         Philosopher[] philosophers = new Philosopher[5];
@@ -29,9 +29,12 @@ public class DiningPhilosophers {
     }
 
     //V2
-    //TODO-2 Descomente o código abaixo e comente o main V1 acima.
-//    public class DiningPhilosophers {
-//
+    //TODO-2 Descomente o código abaixo e comente o main V1 acima
+    /*
+     * Com esse novo código, o último filósofo irá tentar pegar o garfo da direita, e não o da esquerda,
+     * possibilitando assim que não ocorra uma espera circular, não causando deadlock (não fechará mais o círculo)
+     */
+
 //        public static void main(String[] args) throws Exception {
 //
 //            final Philosopher[] philosophers = new Philosopher[5];
@@ -58,5 +61,4 @@ public class DiningPhilosophers {
 //                t.start();
 //            }
 //        }
-//    }
 }

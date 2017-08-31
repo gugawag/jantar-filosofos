@@ -19,7 +19,9 @@ public class Philosopher implements Runnable {
         System.out.println(
                 Thread.currentThread().getName() + " " + action);
         /*TODO-1 descomente a linha abaixo para que o deadlock ocorra mais tardiamente.
-           Execute o código, depois de descomentado, várias vezes. Em algum momento também ocorrerá o deadlock*/
+           Execute o código, depois de descomentado, várias vezes. Em algum momento também ocorrerá o deadlock.
+           O código abaixo faz o filosófo aguardar um tempo aleatório para fazer a ação. */
+
 //        Thread.sleep(((int) (Math.random() * 100)));
     }
 
